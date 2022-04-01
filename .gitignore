@@ -1,0 +1,57 @@
+## Version: 1.0.0
+
+## Ignore all files:
+*
+
+## Ignore all, except:
+
+# Unity must-have directories:
+![aA]ssets
+![aA]ssets/**
+![pP]roject[sS]ettings
+![pP]roject[sS]ettings/**
+![pP]ackages
+![pP]ackages/**
+
+# Git settings:
+!.gitignore
+!.gitattributes
+!.gitmodules
+
+# Documents (Docs)
+![dD]ocs
+![dD]ocs/**
+![dD]ocuments
+![dD]ocuments/**
+
+# Sources (Src)
+![sS]ources
+![sS]ources/**
+![sS]ource
+![sS]ource/**
+![sS]rc
+![sS]rc/**
+
+# Readme
+![rR]eadme.*
+!README.*
+
+# Changelog
+![cC]hangelog.*
+!CHANGELOG.*
+
+# Contribute
+![cC]ontribute.*
+![cC]ontributing.*
+!CONTRIBUTING.*
+!CONTRIBUTE.*
+
+## Ignore again:
+
+# Ignore UnityVS tools:
+Assets/**/UnityVS
+
+#Unity PaclageLock
+[pP]ackages.lock
+
+# Ignore project specific:

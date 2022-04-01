@@ -1,0 +1,22 @@
+#pragma kernel kernel_0
+#pragma kernel kernel_1
+
+Texture2D<float4> InputTexture;
+RWStructuredBuffer<int4> HistogramBuffer;
+
+[numthreads(8,8,1)]
+void kernel_1(uint3 id : SV_DispatchThreadID) 
+{
+    HistogramBuffer[id.x] = uint4(0, 0, 0, 0);
+}
+
+[numthreads(8,8,1)]
+void kernel_0 (uint3 id : SV_DispatchThreadID)
+{
+    uint4 col = uint4(255.0 * InputTexture[id.xy]);
+    
+    InterlockedAdd(HistogramBuffer[col.r].r, 1);
+    InterlockedAdd(HistogramBuffer[col.g].g, 1); 
+    InterlockedAdd(HistogramBuffer[col.b].b, 1); 
+    InterlockedAdd(HistogramBuffer[col.a].a, 1); 
+}
